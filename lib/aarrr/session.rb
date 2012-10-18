@@ -8,6 +8,7 @@ module AARRR
   class Session
     attr_accessor :id
     attr_accessor :env
+    attr_accessor :data
 
     # find or creates a session in the db based on the env or object
     def initialize(env_or_object = nil, attributes = nil)
