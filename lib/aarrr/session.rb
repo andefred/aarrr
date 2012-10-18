@@ -19,7 +19,7 @@ module AARRR
 
         # set newly created id
         user = AARRR.users.find_one({"user_id" => user_id})
-        self.id = user["_id"] if user.present?
+        self.id = user["_id"] if user
       else
         # perform upsert to build object
         self.env = env_or_object
@@ -195,7 +195,7 @@ module AARRR
         if env_or_object["rack.session"].is_a?(Hash) and env_or_object["rack.session"]["user_id"]
           # lookup user_id
           user = AARRR.users.find_one({"user_id" => env_or_object["rack.session"]["user_id"].to_s})
-          if user.present?
+          if user
             if env_or_object["aarrr.id"]
               # TODO: convert aarrr.id items to attach to current user
             end
@@ -217,7 +217,7 @@ module AARRR
     # try to pull out client name from env
     def get_client_name
       client_name = nil
-      if env.present?
+      if env
         AARRR::Config.client_matchers.each do |key, matcher|
           if matcher.respond_to?(:call) and matcher.call(env)
             client_name = key
@@ -231,7 +231,7 @@ module AARRR
     end
 
     def get_user_agent
-      if env.present?
+      if env
         env["HTTP_USER_AGENT"].to_s
       end
     end
