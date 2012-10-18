@@ -44,7 +44,7 @@ module AARRR
 
     # sets some additional data
     def set_data(data)
-      update({"data" => {"$set" => data}})
+      update({"data" =>  data})
     end
 
     # save a cookie to the response
