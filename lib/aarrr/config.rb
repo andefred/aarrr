@@ -52,7 +52,7 @@ module AARRR
 
     # Get the Mongo::Connection to use to pull the AARRR metrics data
     def connection
-      @connection || Mongo::Connection.from_uri(ENV["MONGOHQ_URL"]) || Mongo::Connection.new
+      @connection || Mongo::Connection.from_uri(mongodb_uri) || Mongo::Connection.new
     end
 
     # Set the Mongo::Connection to use to pull the AARRR metrics data
