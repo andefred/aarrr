@@ -35,7 +35,7 @@ module AARRR
     option :user_collection_name, :default => "aarrr_users"
     option :event_collection_name, :default => "aarrr_events"
     option :suppress_errors, :default => false
-    option :mongodb_uri, :default => "mongodb://localhost:27017" #set this in the config file
+    option :mongodb_uri, :default => "mongodb://localhost:27017" #set this in the config file for production
 
     # set default client
     option :default_client, :default => "web"

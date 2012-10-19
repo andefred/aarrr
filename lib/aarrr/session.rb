@@ -38,7 +38,7 @@ module AARRR
       end
     end
 
-    # returns a reference the othe AARRR user
+    # returns a reference the other AARRR user
     def user
       AARRR.users.find_one('_id' => id)
     end
@@ -161,6 +161,25 @@ module AARRR
     end
     alias :rev! :revenue!
 
+    def sent_referral!(event_name, options = {})
+      unless(options.has_key?("referral_code"))
+        o = [('a'..'z'),('A'..'Z'),(0..9)].map{|i| i.to_a}.flatten
+        referral_code = (0...6).map{ o[rand(o.length)] }.join
+        options["referral_code"] = referral_code
+      else
+        referral_code = options["referral_code"]
+      end
+      options[:event_type] = :sent_referral
+
+      track(event_name, options)
+
+      return referral_code
+    end
+
+    def accept_referral!(code)
+      event = AARRR.events.update({"referral_code" => code},{"$set"=>{"complete" => true}},{})
+    end
+
     protected
 
     # expand event type
@@ -186,6 +205,7 @@ module AARRR
     def update(attributes, options = {})
       AARRR.users.update({"_id" => id}, attributes, options)
     end
+
 
     # returns id
     def parse_id(env_or_object)
