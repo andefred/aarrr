@@ -32,5 +32,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "mongo", ">= 1.3.1"
   s.add_runtime_dependency "activesupport", ">= 3.0"
   s.add_development_dependency "rspec", ">= 2.0"
+  s.add_development_dependency "pry"
 end
 

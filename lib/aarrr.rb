@@ -7,9 +7,9 @@ require "aarrr/session"
 require "rack"
 require "aarrr/middleware"
 
-# add railtie
+# add engine
 if defined?(Rails)
-  require "aarrr/railtie"
+  require "aarrr/engine"
 end
 
 # helper method to initialize an AARRR session
