@@ -1,0 +1,18 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Started GET "/blorgh/" for 127.0.0.1 at 2012-11-16 16:44:44 +0100
+Connecting to database specified by database.yml
+Started GET "/blorgh/" for 127.0.0.1 at 2012-11-16 16:44:54 +0100
+Connecting to database specified by database.yml
+Started GET "/blorgh/" for 127.0.0.1 at 2012-11-16 16:45:05 +0100
+Connecting to database specified by database.yml
+Started GET "/blorgh/" for 127.0.0.1 at 2012-11-16 16:45:13 +0100
+Connecting to database specified by database.yml
+Started GET "/blorgh/" for 127.0.0.1 at 2012-11-16 16:45:35 +0100
+Connecting to database specified by database.yml

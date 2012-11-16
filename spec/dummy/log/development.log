@@ -1,0 +1,69 @@
+
+
+Started GET "/aarrr/test" for 127.0.0.1 at 2012-11-16 16:53:09 +0100
+Connecting to database specified by database.yml
+
+ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.9) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `_run__1150078130350905016__call__1228516717159486742__callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.9) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.9) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.9) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.9) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.9) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.9) lib/rails/engine.rb:479:in `call'
+  railties (3.2.9) lib/rails/application.rb:223:in `call'
+  railties (3.2.9) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  rack-test (0.6.2) lib/rack/mock_session.rb:30:in `request'
+  rack-test (0.6.2) lib/rack/test.rb:230:in `process_request'
+  rack-test (0.6.2) lib/rack/test.rb:57:in `get'
+  /Users/dev/.rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/forwardable.rb:201:in `get'
+  capybara (2.0.0) lib/capybara/rack_test/browser.rb:59:in `process'
+  capybara (2.0.0) lib/capybara/rack_test/browser.rb:35:in `process_and_follow_redirects'
+  capybara (2.0.0) lib/capybara/rack_test/browser.rb:21:in `visit'
+  capybara (2.0.0) lib/capybara/rack_test/driver.rb:42:in `visit'
+  capybara (2.0.0) lib/capybara/session.rb:185:in `visit'
+  capybara (2.0.0) lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+  /Users/dev/Projects/aarrr/spec/test_spec.rb:5:in `block (2 levels) in <top (required)>'
+  rspec-core (2.12.0) lib/rspec/core/example.rb:114:in `instance_eval'
+  rspec-core (2.12.0) lib/rspec/core/example.rb:114:in `block in run'
+  rspec-core (2.12.0) lib/rspec/core/example.rb:254:in `with_around_each_hooks'
+  rspec-core (2.12.0) lib/rspec/core/example.rb:111:in `run'
+  rspec-core (2.12.0) lib/rspec/core/example_group.rb:388:in `block in run_examples'
+  rspec-core (2.12.0) lib/rspec/core/example_group.rb:384:in `map'
+  rspec-core (2.12.0) lib/rspec/core/example_group.rb:384:in `run_examples'
+  rspec-core (2.12.0) lib/rspec/core/example_group.rb:369:in `run'
+  rspec-core (2.12.0) lib/rspec/core/command_line.rb:28:in `block (2 levels) in run'
+  rspec-core (2.12.0) lib/rspec/core/command_line.rb:28:in `map'
+  rspec-core (2.12.0) lib/rspec/core/command_line.rb:28:in `block in run'
+  rspec-core (2.12.0) lib/rspec/core/reporter.rb:34:in `report'
+  rspec-core (2.12.0) lib/rspec/core/command_line.rb:25:in `run'
+  rspec-core (2.12.0) lib/rspec/core/runner.rb:69:in `run'
+  rspec-core (2.12.0) lib/rspec/core/runner.rb:8:in `block in autorun'
+
+
+  Rendered /Users/dev/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/dev/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /Users/dev/.rvm/gems/ruby-1.9.3-p286/gems/actionpack-3.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+
+
+Started GET "/aarrr/test" for 127.0.0.1 at 2012-11-16 16:55:20 +0100

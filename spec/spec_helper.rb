@@ -1,6 +1,12 @@
+require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+
 require 'bundler/setup'
 require 'aarrr'
 require 'rack/test'
+
+require "capybara/rspec"
+
+Rails.backtrace_cleaner.remove_silencers!
 
 RSpec.configure do |config|
 
@@ -20,5 +26,7 @@ RSpec.configure do |config|
 
   # add helper methods here
 
+  config.include AARRR::Engine.routes.url_helpers
 end
 
+Capybara.app = Dummy::Application
